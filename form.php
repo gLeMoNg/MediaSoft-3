@@ -6,27 +6,27 @@
     $password = $_POST['password'];
     $array = [];
     if(preg_match("/^[а-яА-Яa-zA-Z]+$/u", $firstname)) {
-        $a = 1;
+        $fn = 1;
     } else {
-        $a = [];
+        $fn = [];
         $array[] = 'Имя не должно содержать цифр';
     }
     if(preg_match("/^[а-яА-Яa-zA-Z]+$/u", $lastname)) {
-        $b = 1;
+        $ln = 1;
     } else {
-        $b = [];
+        $ln = [];
         $array[] = 'Фамилия не должна содержать цифр';
     }
     if(strlen($login) > 3) {
-        $c = 1;
+        $log = 1;
     } else {
-        $c = [];
+        $log = [];
         $array[] = 'Логин должен быть больше 3 символов';
     }
     if(strlen($password) > 4) {
-        $d = 1;
+        $pw = 1;
     } else {
-        $d = [];
+        $pw = [];
         $array[] = 'Пароль должен быть больше 4 символов';
     }
     if (empty($firstname) || empty($lastname) || empty($login) || empty($password)) {
